@@ -176,8 +176,6 @@ public abstract class BaseStatusBar extends SystemUI implements
 
     protected int mCurrentUserId = 0;
 
-    protected FrameLayout mStatusBarContainer;
-
     private RecentController cRecents;
 
     private RecentsComponent mRecents;
@@ -190,6 +188,7 @@ public abstract class BaseStatusBar extends SystemUI implements
     PowerManager mPowerManager;
     protected int mRowHeight;
 
+    protected FrameLayout mStatusBarContainer;
     /**
      * An interface for navigation key bars to allow status bars to signal which keys are
      * currently of interest to the user.<br>
