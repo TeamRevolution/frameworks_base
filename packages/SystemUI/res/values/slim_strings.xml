@@ -208,4 +208,9 @@
     <!-- Navigation bar IME navigation -->
     <string name="accessibility_ime_navigation_left">Cursor left</string>
     <string name="accessibility_ime_navigation_right">Cursor right</string>
+
+    <!-- Network Speed Tile -->
+    <string name="quick_settings_network_speed_on">Net-speed on</string>
+    <string name="quick_settings_network_speed_off">Net-speed off</string>
+
 </resources>

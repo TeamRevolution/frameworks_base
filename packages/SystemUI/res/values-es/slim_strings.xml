@@ -225,4 +225,8 @@
     <string name="accessibility_ime_navigation_left">Cursor izquierda</string>
     <string name="accessibility_ime_navigation_right">Cursor derecha</string>
 
+    <!-- Network Speed Tile -->
+    <string name="quick_settings_network_speed_on">Velocidad red on</string>
+    <string name="quick_settings_network_speed_off">Velocidad red off</string>
+
 </resources>
