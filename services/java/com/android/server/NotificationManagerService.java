@@ -795,7 +795,10 @@ public class NotificationManagerService extends INotificationManager.Stub
             final int oldUser = info.userid;
             if (!info.isSystem) {
                 Slog.v(TAG, "disabling notification listener for user " + oldUser + ": " + component);
-                if (!component.getPackageName().equals("HaloComponent")) unregisterListenerService(component, info.userid);
+                unregisterListenerService(component, info.userid);
+            // Halo
+            // Do not un-register HALO, we un-register only when HALO is closed
+            if (!component.getPackageName().equals("HaloComponent")) unregisterListenerService(component, info.userid);
             }
         }
 
@@ -817,10 +820,14 @@ public class NotificationManagerService extends INotificationManager.Stub
     @Override
     public void registerListener(final INotificationListener listener,
             final ComponentName component, final int userid) {
+        // Lockscreen Notifications 
         final int permission = mContext.checkCallingPermission(
                 android.Manifest.permission.SYSTEM_NOTIFICATION_LISTENER);
-        if (permission == PackageManager.PERMISSION_DENIED)
-            if (!component.getPackageName().equals("HaloComponent")) checkCallerIsSystem();
+        if (permission == PackageManager.PERMISSION_DENIED) {
+            checkCallerIsSystem();
+
+        if (!component.getPackageName().equals("HaloComponent")) checkCallerIsSystem();
+        }
 
         synchronized (mNotificationList) {
             try {
@@ -2699,7 +2706,6 @@ public class NotificationManagerService extends INotificationManager.Stub
                 }
                 pw.println("  ");
             }
-
         }
 
         synchronized (mNotificationList) {
