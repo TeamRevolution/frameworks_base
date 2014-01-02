@@ -47,7 +47,7 @@ public class NotificationViewManager {
     private final static String TAG = "Keyguard:NotificationViewManager";
 
     private final static int MIN_TIME_COVERED = 5000;
-    private static final int ANIMATION_MAX_DURATION = 500;
+    private static final int ANIMATION_MAX_DURATION = 300;
 
     public static NotificationListenerWrapper NotificationListener = null;
     private static ProximityListener ProximityListener = null;
@@ -182,9 +182,14 @@ public class NotificationViewManager {
         @Override
         public void onNotificationPosted(final StatusBarNotification sbn) {
             boolean screenOffAndNotCovered = !mIsScreenOn && mTimeCovered == 0;
-            if (mHostView.addNotification(sbn, screenOffAndNotCovered || mIsScreenOn,
+            boolean ongoingAndReposted = sbn.isOngoing() && mHostView.containsNotification(sbn);
+            if (mHostView.addNotification(sbn, (screenOffAndNotCovered || mIsScreenOn) && !ongoingAndReposted,
                         config.forceExpandedView) && config.wakeOnNotification && screenOffAndNotCovered
+<<<<<<< HEAD
                         && !ongoingAndReposted && mTimeCovered == 0) {
+=======
+                        && !ongoingAndReposted) {
+>>>>>>> 29fea3a... Fix ongoing notifications reappearing when hidden
                 wakeDevice();
             }
         }
