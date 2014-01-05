@@ -4176,6 +4176,12 @@ public final class Settings {
         public static final String APP_SIDEBAR_SHOW_TRIGGER = "app_sidebar_show_trigger";
 
         /**
+         * Settings for clock font style
+         * @hide
+         */
+        public static final String STATUSBAR_CLOCK_FONT_STYLE = "statusbar_clock_font_style";
+
+        /**
          * Holds the text for the Carrier label. An empty string
          * will bring the default text back.
          * @hide
