@@ -371,7 +371,9 @@ public class NotificationHostView extends FrameLayout {
         RemoteViews rv = forceBigContentView && bigContentView ? sbn.getNotification().bigContentView : sbn.getNotification().contentView;
         final View remoteView = rv.apply(mContext, null);
         remoteView.setBackgroundColor(0x33ffffff);
-        remoteView.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+        boolean dynamicWidth = getResources().getBoolean(R.bool.config_lnDynamicWidth);
+        remoteView.setLayoutParams(new LayoutParams(dynamicWidth ? LayoutParams.WRAP_CONTENT : LayoutParams.MATCH_PARENT,
+                    LayoutParams.WRAP_CONTENT));
         remoteView.setX(mDisplayWidth - mNotificationMinHeight);
         if (bigContentView && forceBigContentView) {
             setBackgroundRecursive((ViewGroup)remoteView);
