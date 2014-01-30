@@ -3220,6 +3220,8 @@ public final class Settings {
          */
         public static final String REVERSE_LOOKUP_PROVIDER = "reverse_lookup_provider";
 
+
+
         /**
          * Whether pie controls are enabled
          * @hide
@@ -4346,6 +4348,12 @@ public final class Settings {
         public static final String SCREEN_RECORDER_RECORD_AUDIO = "screen_recorder_record_audio";
 
         /**
+         * Show the pending notification counts as overlays on the status bar
+         * @hide
+         */
+        public static final String SYSTEM_PROFILES_ENABLED = "system_profiles_enabled";
+
+        /**
          * Allows to show the background activity back the lockscreen
          * @hide
          */
@@ -5285,6 +5293,18 @@ public final class Settings {
 
         /**
          * bluetooth HCI snoop log configuration
+         * Whether the Wimax should be on.  Only the WiMAX service should touch this.
+         * @hide
+         */
+         public static final String WIMAX_ON = "wimax_on";
+
+        /**
+         * This are the settings to be backed up.
+         *
+         * NOTE: Settings are backed up and restored in the order they appear
+         *       in this array. If you have one setting depending on another,
+         *       make sure that they are ordered appropriately.
+         *
          * @hide
          */
         public static final String BLUETOOTH_HCI_LOG =
