@@ -3807,6 +3807,12 @@ public final class Settings {
         public static final String QUIET_HOURS_HAPTIC = "quiet_hours_haptic";
 
         /**
+         * Set a custom notification background color
+         * @hide
+         */
+        public static final String LOCKSCREEN_NOTIFICATIONS_COLOR = "lockscreen_notifications_color";
+
+        /**
          * Enables/disables lockscreen notifications
          * @hide
          */

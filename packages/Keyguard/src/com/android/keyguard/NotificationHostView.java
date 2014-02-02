@@ -349,7 +349,7 @@ public class NotificationHostView extends FrameLayout {
             View v = g.getChildAt(i);
             if (v instanceof ViewGroup) {
                 setBackgroundRecursive((ViewGroup)v);
-                ((ViewGroup)v).setBackgroundColor(0x33555555);
+                v.setBackground(null);
             }
         }
     }
@@ -370,14 +370,8 @@ public class NotificationHostView extends FrameLayout {
                 (NotificationViewManager.config.expandedView || sbn.getNotification().contentView == null);
         RemoteViews rv = forceBigContentView && bigContentView ? sbn.getNotification().bigContentView : sbn.getNotification().contentView;
         final View remoteView = rv.apply(mContext, null);
-        remoteView.setBackgroundColor(0x33ffffff);
-        boolean dynamicWidth = getResources().getBoolean(R.bool.config_lnDynamicWidth);
-        remoteView.setLayoutParams(new LayoutParams(dynamicWidth ? LayoutParams.WRAP_CONTENT : LayoutParams.MATCH_PARENT,
-                    LayoutParams.WRAP_CONTENT));
-        remoteView.setX(mDisplayWidth - mNotificationMinHeight);
-        if (bigContentView && forceBigContentView) {
-            setBackgroundRecursive((ViewGroup)remoteView);
-        }
+        setBackgroundRecursive((ViewGroup)remoteView);
+        remoteView.setBackgroundColor(NotificationViewManager.config.notificationColor);
         remoteView.setAlpha(1f);
         if (bigContentView && sbn.getNotification().contentView != null) {
             if (forceBigContentView) {
