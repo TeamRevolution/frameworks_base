@@ -3246,7 +3246,12 @@ public final class Settings {
          */
         public static final String REVERSE_LOOKUP_PROVIDER = "reverse_lookup_provider";
 
-
+        /**
+        *
+        * SMOOTH PROGRESS BAR interpolator
+        * @hide
+        */
+        public static final String PROGRESSBAR_INTERPOLATOR = "progressbar_interpolator";
 
         /**
          * Whether pie controls are enabled
