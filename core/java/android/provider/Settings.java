@@ -3239,6 +3239,12 @@ public final class Settings {
         public static final String FORWARD_LOOKUP_PROVIDER = "forward_lookup_provider";
 
         /**
+         * Make the battery icon hide
+         * @hide
+         */
+        public static final String HIDE_BATTERY_ICON = "hide_battery_icon";
+
+        /**
          * The people lookup provider
          *
          * @hide
