@@ -1133,12 +1133,12 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         });
 
         if (!mRecreating) {
-            removeSidebarView();
             /* ChaosLab: GestureAnywhere - BEGIN */
             addGestureAnywhereView();
             /* OSELab: GestureAnywhere - END */
         } else {
             addActiveDisplayView();
+            removeSidebarView();
         }
 
         addSidebarView();
