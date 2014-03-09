@@ -29,6 +29,8 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.animation.TimeInterpolator;
+import android.annotation.ChaosLab;
+import android.annotation.ChaosLab.Classification;
 import android.app.ActivityManager;
 import android.app.ActivityManagerNative;
 import android.app.Notification;
@@ -683,6 +685,8 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 UserHandle.USER_CURRENT) == 1;
     }
 
+    @ChaosLab(name="GestureAnywhere", classification=Classification.CHANGE_CODE)
+
     private boolean isExpanded() {
         return Settings.System.getIntForUser(mContext.getContentResolver(),
                 Settings.System.EXPANDED_DESKTOP_STATE, 0,
@@ -1038,29 +1042,33 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
 
         updateShowSearchHoldoff();
 
-        if (!mRecreating) {
-            if (mNavigationBarView == null) {
+        if (mNavigationBarView == null) {
                 mNavigationBarView =
                     (NavigationBarView) View.inflate(context, R.layout.navigation_bar, null);
-            }
-            removeSidebarView();
-
-            mNavigationBarView.setDisabledFlags(mDisabled);
-            mNavigationBarView.setBar(this);
-            addNavigationBarCallback(mNavigationBarView);
-            mNavigationBarView.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    checkUserAutohide(v, event);
-                    return false;
-                }
-            });
         }
 
-        // Setup pie container if enabled
-        attachPieContainer(isPieEnabled());
+        mNavigationBarView.setDisabledFlags(mDisabled);
+        mNavigationBarView.setBar(this);
+        addNavigationBarCallback(mNavigationBarView);
+        mNavigationBarView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                checkUserAutohide(v, event);
+                return false;
+            }
+        });
+
+        if (!mRecreating) {
+            removeSidebarView();
+            /* ChaosLab: GestureAnywhere - BEGIN */
+            addGestureAnywhereView();
+            /* ChaosLab: GestureAnywhere - END */
+        }
 
         addSidebarView();
+
+        // Setup pie container if enabled
+        attachPieContainer(isPieEnabled());       
 
         // figure out which pixel-format to use for the status bar.
         mPixelFormat = PixelFormat.OPAQUE;
