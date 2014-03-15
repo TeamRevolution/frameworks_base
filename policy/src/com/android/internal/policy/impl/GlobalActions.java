@@ -78,6 +78,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.android.internal.app.ThemeUtils;
+import com.android.internal.util.ose.NamelessActions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -291,7 +292,8 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
                         R.string.global_action_onthego) {
 
                         public void onPress() {
-                            startOnTheGo();
+                            NamelessActions.processAction(mContext,
+                                    NamelessActions.ACTION_ONTHEGO_TOGGLE);
                         }
 
                         public boolean onLongPress() {

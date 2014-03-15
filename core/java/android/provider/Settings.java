@@ -4441,13 +4441,26 @@ public final class Settings {
          *
          * @hide
          */
-        public static final String ON_THE_GO_CAMERA = "on_the_go_camera";       
+        public static final String ON_THE_GO_CAMERA = "on_the_go_camera";  
+
+        /**
+         * Whether the service should restart itself or not.
+         *
+         * @hide
+         */
+        public static final String ON_THE_GO_SERVICE_RESTART = "on_the_go_service_restart";     
      
         /**
          * Whether recent panel gravity is left or right (default = Gravity.RIGHT).
          * @hide
          */
         public static final String RECENT_PANEL_GRAVITY = "recent_panel_gravity";
+
+         /**
+         * Disable profiles from powermenu even if still turned on
+         * @hide
+         */
+        public static final String SHOW_PROFILES = "show_profiles";
 
         /**
          * Size of recent panel view in percent (default = 100).
