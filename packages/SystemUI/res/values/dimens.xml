@@ -258,8 +258,11 @@
     <!-- Slim recent -->
     <dimen name="recent_width">230dp</dimen>
     <dimen name="recent_app_icon_size">48dp</dimen>
+    <dimen name="recent_favorite_icon_size">18dp</dimen>
     <dimen name="recent_thumbnail_width">198dp</dimen>
     <dimen name="recent_thumbnail_height">140dp</dimen>
+    <dimen name="recent_header_width">120dp</dimen>
+    <dimen name="recent_text_size">20dp</dimen>
  
     <!-- Halo -->
     <dimen name="halo_bubble_size">75dp</dimen>
@@ -273,5 +276,5 @@
     <dimen name="halo_speech_vpadding_top">3dp</dimen>
     <dimen name="halo_speech_vpadding_bottom">3dp</dimen>
     <dimen name="halo_content_max_width">250dp</dimen>
-
+   
 </resources>
