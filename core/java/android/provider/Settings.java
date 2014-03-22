@@ -3842,7 +3842,6 @@ public final class Settings {
         public static final String MENU_UNLOCK_SCREEN = "menu_unlock_screen";
 
         /**
-<<<<<<< HEAD
          *  TeloRadio Low power network 
          * @hide
          */
@@ -3853,7 +3852,8 @@ public final class Settings {
          * @hide
          */
         public static final String TELO_RADIO_HIGH_POWER = "telo_radio_high_power";        
-=======
+     
+        /**
          * Whether recent panel gravity is left or right (default = Gravity.RIGHT).
          * @hide
          */
@@ -3870,7 +3870,6 @@ public final class Settings {
          * @hide
          */
         public static final String RECENT_PANEL_FAVORITES = "recent_panel_favorites";
->>>>>>> slim/kk4.4
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
