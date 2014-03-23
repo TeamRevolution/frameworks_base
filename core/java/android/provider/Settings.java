@@ -3230,6 +3230,9 @@ public final class Settings {
          */
         public static final String FORMAL_TEXT_INPUT = "formal_text_input";
 
+        /** @hide */
+        public static final String CUSTOM_STATUS_BAR_APPLY = "custom_status_bar_apply";
+
         /**
          * Enable looking up of phone numbers of nearby places
          *
