@@ -3444,6 +3444,12 @@ public final class Settings {
         public static final String TILE_CONTACT_ACTIONS = "tile_contact_actions";
 
         /**
+         * String for backing up see through status
+         * @hide
+         */
+        public static final String LOCKSCREEN_SEE_THROUGH_BACKUP = "lockscreen_see_through_backup";
+
+        /**
          * Reminder alert on / off
          * @hide
          */
