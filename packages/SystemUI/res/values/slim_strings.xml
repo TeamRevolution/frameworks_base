@@ -155,6 +155,4 @@
     <!-- [CHAR LIMIT=10] Running services, summary of foreground processes -->
     <string name="service_used_mem"><xliff:g id="memory">%1$s</xliff:g> used</string>
 
-    <string name="app_stop_item_title">Kill app</string>
-
 </resources>

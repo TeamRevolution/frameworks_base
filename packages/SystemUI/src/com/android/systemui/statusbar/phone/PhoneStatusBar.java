@@ -1050,7 +1050,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                     return false;
                 }
             });
-            addAppCircleSidebar();
         }
 
         // Setup pie container if enabled
