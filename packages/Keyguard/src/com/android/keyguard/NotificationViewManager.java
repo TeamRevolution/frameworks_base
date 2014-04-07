@@ -185,11 +185,7 @@ public class NotificationViewManager {
             boolean ongoingAndReposted = sbn.isOngoing() && mHostView.containsNotification(sbn);
             if (mHostView.addNotification(sbn, (screenOffAndNotCovered || mIsScreenOn) && !ongoingAndReposted,
                         config.forceExpandedView) && config.wakeOnNotification && screenOffAndNotCovered
-<<<<<<< HEAD
-                        && !ongoingAndReposted && mTimeCovered == 0) {
-=======
                         && !ongoingAndReposted) {
->>>>>>> 29fea3a... Fix ongoing notifications reappearing when hidden
                 wakeDevice();
             }
         }
