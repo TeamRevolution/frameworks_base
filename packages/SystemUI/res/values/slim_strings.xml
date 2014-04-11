@@ -198,4 +198,7 @@
     <!-- Hide notification icons -->
     <string name="status_bar_notification_hide_icon_packages">Hide app\'s notification icon(s)</string>
 
+    <!-- Navigation bar IME navigation -->
+    <string name="accessibility_ime_navigation_left">Cursor left</string>
+    <string name="accessibility_ime_navigation_right">Cursor right</string>
 </resources>
