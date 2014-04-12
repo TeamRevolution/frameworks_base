@@ -64,7 +64,7 @@ public class ScreenRecorder {
      * @param width Width of the video output.
      * @param height Height of the video output.
      * @param bitRate Bitrate to record at, default is 4000000.
-     * @param timeLimitSec Maximum time to record for.  Maximum allowed is 300 seconds (5 minutes).
+     * @param timeLimitSec Maximum time to record for.  Maximum allowed is 600 seconds (10 minutes).
      */
     public void init(int rotation, int width, int height,
                      int bitRate, int timeLimitSec, boolean recordAudio) {
