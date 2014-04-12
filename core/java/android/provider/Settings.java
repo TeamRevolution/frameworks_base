@@ -4182,6 +4182,12 @@ public final class Settings {
         public static final String KEY_MENU_DOUBLE_TAP_ACTION = "key_menu_double_tap_action";
 
         /**
+         *
+         * @hide
+         */
+        public static final String ANIMATION_CONTROLS_NO_SCROLL = "animation_controls_no_scroll";
+
+        /**
          * Determine custom scroll friction.
          * @hide
          */
