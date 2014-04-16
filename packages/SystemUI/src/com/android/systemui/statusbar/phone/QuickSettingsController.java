@@ -54,7 +54,7 @@ import static com.android.internal.util.slim.QSConstants.TILE_WIFI;
 import static com.android.internal.util.slim.QSConstants.TILE_WIFIAP;
 import static com.android.internal.util.slim.QSConstants.TILE_REBOOT;
 import static com.android.internal.util.slim.QSConstants.TILE_INTERNALMEMORY;
-import static com.android.internal.util.ose.QSConstants.TILE_ONTHEGO;
+import static com.android.internal.util.slim.QSConstants.TILE_ONTHEGO;
 
 import android.app.Activity;
 import android.app.ActivityManagerNative;
