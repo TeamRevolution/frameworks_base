@@ -343,7 +343,7 @@ public class ActiveDisplayView extends FrameLayout {
             mProximityThreshold = Settings.System.getLong(
                     resolver, Settings.System.ACTIVE_DISPLAY_THRESHOLD, 8000L);
             mLockScreenTimeOut = Settings.Secure.getLong(
-                    resolver, Settings.Secure.LOCK_SCREEN_LOCK_AFTER_TIMEOUT, 5000);
+                    resolver, Settings.Secure.LOCK_SCREEN_LOCK_AFTER_TIMEOUT, 0);
 
             createExcludedAppsSet(excludedApps);
 
