@@ -71,8 +71,8 @@ public class NotificationViewManager {
         //User configurable values, set defaults here
         public boolean showAlways = false;
         public boolean pocketMode = false;
-        public boolean hideLowPriority = false;
-        public boolean hideNonClearable = false;
+        public boolean hideLowPriority = true;
+        public boolean hideNonClearable = true;
         public boolean dismissAll = true;
         public boolean expandedView = true;
         public boolean forceExpandedView = false;
