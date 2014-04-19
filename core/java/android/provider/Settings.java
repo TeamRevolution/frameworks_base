@@ -4457,6 +4457,14 @@ public final class Settings {
          */
         public static final String RECENT_PANEL_GRAVITY = "recent_panel_gravity";
 
+        /**
+         * Recent panel expanded mode (auto = 0, always = 1, never = 2).
+         * default = 0.
+         *
+         * @hide
+         */
+        public static final String RECENT_PANEL_EXPANDED_MODE = "recent_panel_expanded_mode";
+
          /**
          * Disable profiles from powermenu even if still turned on
          * @hide
@@ -5700,6 +5708,26 @@ public final class Settings {
          * @hide
          */
         public static final String LOCK_BEFORE_UNLOCK = "lock_before_unlock";
+
+        /**
+         *Whether shaking the device enables a secure screen
+         * @hide
+         */
+        public static final String LOCK_SHAKE_TEMP_SECURE = "lock_shake_temp_secure";
+
+        /**
+         *When LOCK_SHAKE_TEMP_SECURE is enabled, the time
+         *before a secure lock will auto-engage in milliseconds
+         * @hide
+         */
+        public static final String LOCK_SHAKE_SECURE_TIMER = "lock_shake_secure_timer";
+
+        /**
+         *Whether the device will unlock itself or not upon completeion
+         *of the insecure lock challenge
+         * @hide
+         */
+        public static final String LOCK_TEMP_SECURE_MODE = "lock_temp_secure_mode";
 
         /**
          * Determines the width and height of the LockPatternView widget
