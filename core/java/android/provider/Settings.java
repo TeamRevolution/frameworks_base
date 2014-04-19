@@ -6812,7 +6812,7 @@ public final class Settings {
             UI_THEME_AUTO_MODE,
             PRIVACY_GUARD_DEFAULT,
             PRIVACY_GUARD_NOTIFICATION,
-            ADVANCED_REBOOT
+            ADVANCED_REBOOT,
             DEVELOPMENT_SHORTCUT
         };
 
