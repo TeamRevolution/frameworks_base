@@ -278,5 +278,8 @@
     <dimen name="halo_speech_vpadding_top">3dp</dimen>
     <dimen name="halo_speech_vpadding_bottom">3dp</dimen>
     <dimen name="halo_content_max_width">250dp</dimen>
-   
+
+    <!-- Quick Settings tile geometry: interior margin, above and below icon (ribbon mode) -->
+    <dimen name="qs_tile_ribbon_icon_margin">16dp</dimen>
+
 </resources>

@@ -144,13 +144,18 @@ public class QuickSettingsController {
     private ContentObserver mObserver;
     public PhoneStatusBar mStatusBarService;
     private final String mSettingsKey;
+    private boolean mHideLiveTiles;
+    private boolean mHideLiveTileLabels;
+    private final boolean mRibbonMode;
 
     private InputMethodTile mIMETile;
 
     private static final int MSG_UPDATE_TILES = 1000;
 
     public QuickSettingsController(Context context, QuickSettingsContainerView container,
-            PhoneStatusBar statusBarService, String settingsKey) {
+
+            PhoneStatusBar statusBarService, String settingsKey, boolean ribbonMode) {
+
         mContext = context;
         mContainerView = container;
         mHandler = new Handler() {
@@ -168,6 +173,7 @@ public class QuickSettingsController {
         mStatusBarService = statusBarService;
         mQuickSettingsTiles = new ArrayList<QuickSettingsTile>();
         mSettingsKey = settingsKey;
+        mRibbonMode = ribbonMode;
     }
 
     void loadTiles() {
@@ -283,6 +289,14 @@ public class QuickSettingsController {
             }
         }
 
+        if (mHideLiveTiles) {
+            return;
+        }
+
+        if (mRibbonMode) {
+            return;
+        }
+
         // Load the dynamic tiles
         // These toggles must be the last ones added to the view, as they will show
         // only when they are needed
@@ -350,6 +364,16 @@ public class QuickSettingsController {
         loadTiles();
         setupBroadcastReceiver();
         setupContentObserver();
+        if (mHideLiveTileLabels) {
+            for (QuickSettingsTile t : mQuickSettingsTiles) {
+                t.setLabelVisibility(false);
+            }
+        }
+        if (mRibbonMode) {
+            for (QuickSettingsTile t : mQuickSettingsTiles) {
+                t.switchToRibbonMode();
+            }
+        }
     }
 
     void setupContentObserver() {
@@ -451,5 +475,13 @@ public class QuickSettingsController {
         for (QuickSettingsTile t : mQuickSettingsTiles) {
             t.updateResources();
         }
+    }
+
+    public void hideLiveTileLabels(boolean hide) {
+        mHideLiveTileLabels = hide;
+    }
+
+    public void hideLiveTiles(boolean hide) {
+        mHideLiveTiles = hide;
     }
 }

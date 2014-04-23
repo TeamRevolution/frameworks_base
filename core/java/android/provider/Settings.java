@@ -3579,6 +3579,33 @@ public final class Settings {
         public static final String EXPANDED_RING_MODE = "expanded_ring_mode";
 
         /**
+         * Quick Settings Quick access ribbon
+         *
+         * @hide
+         */
+        public static final String QS_QUICK_ACCESS = "qs_quick_access";
+
+        /**
+         * Quick Settings Quick access ribbon - linked layout
+         *
+         * @hide
+         */
+        public static final String QS_QUICK_ACCESS_LINKED = "qs_quick_access_linked";
+
+        /**
+         * Quick Settings Ribbon Tiles to Use
+         *
+         * @hide
+         */
+        public static final String QUICK_SETTINGS_RIBBON_TILES = "quick_settings_ribbon_tiles";
+
+        /**
+         * Animate-flip Quick Settings Panel Tiles on click
+         * @hide
+         */
+        public static final String QUICK_SETTINGS_TILES_FLIP = "quick_settings_tiles_flip";
+
+        /**
          * Quick Settings Quick Pulldown
          *
          * @hide
