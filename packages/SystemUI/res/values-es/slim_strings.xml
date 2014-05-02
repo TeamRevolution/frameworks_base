@@ -145,4 +145,55 @@
     <string name="pie_phone_status_no_service">Sin servicio</string>
     <string name="pie_phone_status_airplane_mode">Modo avión activado</string>
     <string name="pie_phone_status_emergency_only">Sólo llamadas de emergencia</string>
+
+    <!-- Title shown in recents popup for adding an application to the split view -->
+    <string name="status_bar_recent_add_to_split_view">Ver en multi-ventana</string>
+
+    <!-- Custom Quick Settings toggles -->
+    <string name="quick_settings_custom_toggle">Personal.</string>
+    <string name="quick_settings_contact_toggle">Contacto</string>
+    <string name="quick_settings_reminder">Recordatorio</string>
+    <string name="quick_settings_reminder_title">Titulo:</string>
+    <string name="quick_settings_reminder_message">Mensaje:</string>
+    <string name="quick_settings_reminder_time">Tiempo recordatorio</string>
+    <string name="quick_settings_reminder_set">Elige tiempo</string>
+    <string name="quick_settings_reminder_update">Actualiza tiempo</string>
+    <string name="quick_settings_reminder_no_expire">No notificacion</string>
+    <string name="quick_settings_reminder_dismiss">Borrar recordatorio</string>
+    <string name="quick_settings_reminder_dismiss_message">Borrar recordatorio actual?</string>
+    <string name="quick_settings_reminder_help_title">Toca:</string>
+    <string name="quick_settings_reminder_noti_dismiss">Ignorar</string>
+    <string name="quick_settings_reminder_help_message">Toca aqui para escoger recordatorio. pulsacion larga borrar actual.</string>
+
+    <!-- App sidebar -->
+    <string name="default_folder_text">Carpeta</string>
+    <string name="title_activity_sidebar_configuration">Contenido Appsidebar</string>
+    <string name="action_save">Guardar</string>
+    <string name="toast_items_saved">Appbar accesos guardados.</string>
+    <string name="content_setup_instructions">Para añadir aplicaciones escoge el icono y haz pulsación larga y arrastrar hacia la barra lateral.</string>
+    <string name="content_setup_dismiss">Continuar</string>
+
+    <!-- On The Go -->
+    <string name="onthego_notif_ticker">On-The-Go activado</string>
+    <string name="onthego_notif_title">On-The-Go esta activo</string>
+    <string name="onthego_notif_stop">Stop</string>
+    <string name="onthego_notif_options">Opciones</string>
+    <string name="onthego_notif_error">No se puede iniciar On-The-Go</string>
+    <string name="onthego_notif_restart">Reinicia On-The-Go</string>
+    <string name="onthego_notif_camera_changed">Cambio camara</string>
+    <string name="onthego_transparency">Transparencia</string>
+    <string name="onthego_front_camera">Camara frontal</string>
+    <string name="onthego_service_toggle">Reinico automatico del servicio</string>
+
+    <!-- Recent Apps -->
+    <string name="recent_title_txt">Aplicaciones recientes</string>
+
+    <!-- Title shown in recents popup for locking an app from being cleared -->
+    <string name="status_bar_recent_lock_item_title">Bloquear</string>
+
+    <!-- Title shown in recents popup for unlocking an app from being cleared -->
+    <string name="status_bar_recent_unlock_item_title">Desbloquear</string>
+
+    <!-- Hide notification icons -->
+    <string name="status_bar_notification_hide_icon_packages">Ocultar icono notificación</string>
 </resources>
