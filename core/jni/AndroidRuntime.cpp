@@ -178,7 +178,6 @@ extern int register_android_content_res_Configuration(JNIEnv* env);
 extern int register_android_animation_PropertyValuesHolder(JNIEnv *env);
 extern int register_com_android_internal_content_NativeLibraryHelper(JNIEnv *env);
 extern int register_com_android_internal_net_NetworkStatsFactory(JNIEnv *env);
-extern int register_android_content_res_PackageRedirectionMap(JNIEnv* env);
 
 static AndroidRuntime* gCurRuntime = NULL;
 
@@ -1215,6 +1214,7 @@ static const RegJNIRec gRegJNI[] = {
 #ifdef QCOM_ACTIVITY_TRIGGER
     REG_JNI(register_com_android_internal_app_ActivityTrigger),
 #endif
+
 };
 
 /*
