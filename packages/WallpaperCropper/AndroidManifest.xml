@@ -5,8 +5,10 @@
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
         <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
         <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+        <uses-permission android:name="android.permission.SET_KEYGUARD_WALLPAPER" />
+        <uses-permission android:name="android.permission.READ_THEMES" />
 
-        <application android:requiredForAllUsers="true">
+    <application android:requiredForAllUsers="true">
         <activity
             android:name="WallpaperCropActivity"
             android:theme="@style/Theme.WallpaperCropper"
