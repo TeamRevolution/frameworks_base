@@ -323,8 +323,6 @@ public class WindowManagerService extends IWindowManager.Stub
     final Context mContext;
     private Context mUiContext;
 
-    private Context mUiContext;
-
     final boolean mHaveInputMethods;
 
     final boolean mAllowBootMessages;
