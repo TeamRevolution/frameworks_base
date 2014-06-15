@@ -102,4 +102,9 @@
     <string name="profile_none">Ninguno</string>
 
 
+    <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_resetBatteryStats">Reiniciar estadísticas batería</string>
+    <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_resetBatteryStats">Permitir a una aplicación reiniciar las estadísticas del uso de la batería.</string>
+
 </resources>
