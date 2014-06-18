@@ -1241,5 +1241,4 @@ public class ProgressBar extends View {
             sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_SELECTED);
         }
     }
->>>>>>> slim/kk4.4
 }
