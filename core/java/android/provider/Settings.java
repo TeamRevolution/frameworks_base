@@ -1782,7 +1782,6 @@ public final class Settings {
         @Deprecated
         public static final String WIFI_STATIC_DNS2 = "wifi_static_dns2";
 
-
         /**
          * Determines whether remote devices may discover and/or connect to
          * this device.
@@ -1824,7 +1823,6 @@ public final class Settings {
         @Deprecated
         public static final String LOCK_PATTERN_TACTILE_FEEDBACK_ENABLED =
             "lock_pattern_tactile_feedback_enabled";
-
 
         /**
          * A formatted string of the next alarm that is set, or the empty string
@@ -1928,6 +1926,28 @@ public final class Settings {
          * @hide
          */
         public static final String AUTO_BRIGHTNESS_TWILIGHT_ADJUSTMENT = "auto_brightness_twilight_adjustment";
+
+        /**
+         * The keyboard brightness to be used while the screen is on.
+         * Valid value range is between 0 and {@link PowerManager#getMaximumKeyboardBrightness()}
+         * @hide
+         */
+        public static final String KEYBOARD_BRIGHTNESS = "keyboard_brightness";
+
+        /**
+         * The button brightness to be used while the screen is on or after a button press,
+         * depending on the value of {@link BUTTON_BACKLIGHT_TIMEOUT}.
+         * Valid value range is between 0 and {@link PowerManager#getMaximumButtonBrightness()}
+         * @hide
+         */
+        public static final String BUTTON_BRIGHTNESS = "button_brightness";
+
+        /**
+         * The time in ms to keep the button backlight on after pressing a button.
+         * A value of 0 will keep the buttons on for as long as the screen is on.
+         * @hide
+         */
+        public static final String BUTTON_BACKLIGHT_TIMEOUT = "button_backlight_timeout";
 
         /**
          * Control whether the process CPU usage meter should be shown.
@@ -2069,6 +2089,18 @@ public final class Settings {
         public static final int VOLUME_OVERLAY_EXPANDED = 2;
         /** @hide */
         public static final int VOLUME_OVERLAY_NONE = 3;
+
+        /**
+         * Whether the torch will pulse on incoming call
+         * @hide
+         */
+        public static final String TORCH_WHILE_RINGING = "torch_while_ringing";
+
+        /**
+         * Pulse rate of the incoming call torch (if enabled)
+         * @hide
+         */
+        public static final String TORCH_WHILE_RINGING_PERIOD = "torch_while_ringing_period";
 
         /**
          * Whether the blacklisting feature for phone calls is enabled
@@ -2411,6 +2443,12 @@ public final class Settings {
          * @hide
          */
         public static final String DTMF_TONE_TYPE_WHEN_DIALING = "dtmf_tone_type";
+
+        /**
+         * Whether incall glowpad background is transparent or not.  The value is
+         * boolean (1 or 0).
+        */
+        public static final String INCALL_GLOWPAD_TRANSPARENCY = "incall_glowpad_transparency";
 
         /**
          * Whether the hearing aid is enabled. The value is
@@ -3862,6 +3900,34 @@ public final class Settings {
                 "notification_shortcuts_color_mode";
 
         /**
+         * Sensitivity of all system shake events
+         * @hide
+         */
+        public static final String SHAKE_SENSITIVITY = "shake_sensitivity";
+
+        /**
+         * Apps where shake events are disabled
+         * @hide
+         */
+        public static final String DISABLED_SHAKE_APPS = "disabled_shake_apps";
+
+        /**
+         * Whether to enable the shake listener actions.
+         * @hide
+         */
+        public static final String SHAKE_LISTENER_ENABLED = "shake_listener_enabled";
+
+        /**
+         * Shake events for shaking along the x, y, and z axis.
+         * @hide
+         */
+        public static final String[] SHAKE_EVENTS_REGULAR = new String[] {
+            "shake_events_regular_x",
+            "shake_events_regular_y",
+            "shake_events_regular_z"
+        };
+
+        /**
          * Whether to enable quiet hours.
          * @hide
          */
@@ -4676,6 +4742,21 @@ public final class Settings {
          * @hide
          */
         public static final String RECENT_PANEL_EXPANDED_MODE = "recent_panel_expanded_mode";
+
+        /**
+         * Recent panel expanded mode (auto = 0, always = 1, never = 2).
+         * default = 0.
+         *
+         * @hide
+         */
+        public static final String RECENT_PANEL_EXPANDED_MODE = "recent_panel_expanded_mode";
+
+        /**
+         * Recent panel: Show topmost task
+         *
+         * @hide
+         */
+        public static final String RECENT_PANEL_SHOW_TOPMOST = "recent_panel_show_topmost";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
@@ -5788,6 +5869,36 @@ public final class Settings {
         public static final String LOCK_BEFORE_UNLOCK = "lock_before_unlock";
 
         /**
+         * Shake events for x,y,z cords
+         * @hide
+         */
+        public static final String[] LOCK_SHAKE_EVENTS = new String[] {
+            "lock_shake_events_x",
+            "lock_shake_events_y",
+            "lock_shake_events_z"
+        };
+
+        /**
+         *Whether shaking the device enables a secure screen
+         * @hide
+         */
+        public static final String LOCK_SHAKE_TEMP_SECURE = "lock_shake_temp_secure";
+
+        /**
+         *When LOCK_SHAKE_TEMP_SECURE is enabled, the time
+         *before a secure lock will auto-engage in milliseconds
+         * @hide
+         */
+        public static final String LOCK_SHAKE_SECURE_TIMER = "lock_shake_secure_timer";
+
+        /**
+         *Whether the device will unlock itself or not upon completeion
+         *of the insecure lock challenge
+         * @hide
+         */
+        public static final String LOCK_TEMP_SECURE_MODE = "lock_temp_secure_mode";
+
+        /**
          * Determines the width and height of the LockPatternView widget
          * @hide
          */
@@ -5819,6 +5930,13 @@ public final class Settings {
          * @deprecated
          */
         public static final String LOCK_SCREEN_OWNER_INFO = "lock_screen_owner_info";
+
+        /**
+         * Allow all (non keyguard specific) widgets to be added to the lockscreen
+         * @hide
+         */
+        public static final String ALLOW_ALL_LOCKSCREEN_WIDGETS =
+            "allow_all_lockscreen_widgets";
 
         /**
          * Ids of the user-selected appwidgets on the lockscreen (comma-delimited).
@@ -7620,6 +7738,12 @@ public final class Settings {
          * @hide
          */
         public static final String SMS_SHORT_CODE_RULE = "sms_short_code_rule";
+
+       /**
+        * Used to select TCP's default initial receiver window size in segments - defaults to a build config value
+        * @hide
+        */
+       public static final String TCP_DEFAULT_INIT_RWND = "tcp_default_init_rwnd";
 
        /**
         * Used to disable Tethering on a device - defaults to true
