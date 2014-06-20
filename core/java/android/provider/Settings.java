@@ -3034,11 +3034,24 @@ public final class Settings {
          */
         public static final String HALO_UNLOCK_PING = "halo_unlock_ping";
 
-	/**
+	    /**
          * HALO color, default is 0xff33b5e5 (normal)
          * @hide
          */
         public static final String HALO_COLOR = "halo_color";
+
+        /**
+         * Heads Up Notifications
+         * @hide
+         */
+        public static final String HEADS_UP_NOTIFICATION = "heads_up_enabled";
+
+        /**
+         * Which applications to disable heads up notifications for
+         *
+         * @hide
+         */
+        public static final String HEADS_UP_CUSTOM_VALUES = "heads_up_custom_values";
 
         /**
          * Whether to show the battery bar

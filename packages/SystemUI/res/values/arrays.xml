@@ -73,4 +73,8 @@
         <item>NW</item> <!-- North west -->
     </string-array>
 
+    <string-array name="heads_up_pkg_whitelist">
+        <item>com.android.mms</item>
+    </string-array>
+
 </resources>
