@@ -21,17 +21,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="LockscreenWallpaper"
-            android:theme="@style/Theme.WallpaperCropper"
-            android:label="@string/pick_lockscreen"
-            android:icon="@mipmap/ic_lockscreen_wallpaper"
-            android:finishOnCloseSystemDialogs="true">
-            <intent-filter>
-                <action android:name="android.intent.action.SET_KEYGUARD_WALLPAPER" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name="LockWallpaperPickerActivity"
             android:theme="@style/Theme.WallpaperCropper"
             android:label="@string/pick_wallpaper"
