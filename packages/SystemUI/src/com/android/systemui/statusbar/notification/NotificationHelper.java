@@ -33,6 +33,7 @@ import android.graphics.LightingColorFilter;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.service.notification.StatusBarNotification;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
@@ -59,6 +60,7 @@ import java.util.List;
 
 /* This class has some helper methods and also works as a bridge for Peek's notifications and its surrounding layers */
 public class NotificationHelper {
+
 
     public final static String DELIMITER = "|";
 
@@ -111,7 +113,6 @@ public class NotificationHelper {
             String newNotificationText = getNotificationTitle(newNotif);
             if(newNotificationText == null ? oldNotificationText != null :
                !newNotificationText.equals(oldNotificationText)) return true;
-
             // Last chance, check when the notifications were posted. If times
             // are equal, we shouldn't display the new notification. (Should apply to peek only)
             if(when && (oldNotif.getNotification().when != newNotif.getNotification().when)) return true;
@@ -203,5 +204,10 @@ public class NotificationHelper {
         return state == TelephonyManager.SIM_STATE_PIN_REQUIRED
                  || state == TelephonyManager.SIM_STATE_PUK_REQUIRED
                  || state == TelephonyManager.SIM_STATE_NETWORK_LOCKED;
+    }
+
+    public boolean openInFloatingMode() {
+        return Settings.System.getBoolean(mContext.getContentResolver(),
+                Settings.System.HEADS_UP_FLOATING_WINDOW, true);
     }
 }

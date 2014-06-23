@@ -3075,6 +3075,13 @@ public final class Settings {
         public static final String HEADS_UP_FS_TIMEOUT = "heads_up_fs_timeout";
 
         /**
+         * Heads Up in Floating Window
+         *
+         * @hide
+         */
+        public static final String HEADS_UP_FLOATING_WINDOW = "heads_up_floating_window";
+
+        /**
          * Whether to show the battery bar
          * @hide
          */
