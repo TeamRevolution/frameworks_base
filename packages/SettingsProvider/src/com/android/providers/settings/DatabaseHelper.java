@@ -1979,22 +1979,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-<<<<<<< HEAD
-=======
-    private void loadQuickBootSetting(SQLiteDatabase db) {
-        db.beginTransaction();
-        SQLiteStatement stmt = null;
-        try {
-            stmt = db.compileStatement("INSERT OR REPLACE INTO global(name,value)"
-                    + " VALUES(?,?);");
-            loadSetting(stmt, Settings.Global.ENABLE_QUICKBOOT, 0);
-            db.setTransactionSuccessful();
-        } finally {
-            db.endTransaction();
-            if (stmt != null) stmt.close();
-        }
-    }
-
     private void loadHeadsUpSetting(SQLiteStatement stmt) {
         String headsUpValues = mContext.getResources()
                 .getString(R.string.def_heads_up_notification_values);
@@ -2004,7 +1988,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
->>>>>>> 18294da... SystemUI: Expose heads up.
     private void loadSettings(SQLiteDatabase db) {
         loadSystemSettings(db);
         loadSecureSettings(db);

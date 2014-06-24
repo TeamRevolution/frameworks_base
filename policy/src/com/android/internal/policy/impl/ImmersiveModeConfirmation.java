@@ -253,7 +253,6 @@ public class ImmersiveModeConfirmation {
             // create the confirmation cling
             mClingLayout = (ViewGroup)
                     View.inflate(getUiContext(), R.layout.immersive_mode_cling, null);
-            }
 
             final Button ok = (Button) mClingLayout.findViewById(R.id.ok);
             ok.setOnClickListener(new OnClickListener() {
