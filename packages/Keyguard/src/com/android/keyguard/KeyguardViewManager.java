@@ -133,8 +133,9 @@ public class KeyguardViewManager {
     private KeyguardUpdateMonitorCallback mBackgroundChanger = new KeyguardUpdateMonitorCallback() {
         @Override
         public void onSetBackground(Bitmap bmp) {
-            mKeyguardHost.setCustomBackground(bmp != null ?
-                    new BitmapDrawable(mContext.getResources(), bmp) : null);
+            if (bmp != null) mBlurredImage = null;
+            mIsCoverflow = true;
+            setCustomBackground(bmp);
             updateShowWallpaper(mKeyguardHost.shouldShowWallpaper());
         }
     };
